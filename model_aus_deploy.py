@@ -3,9 +3,11 @@ import joblib
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 
-model=joblib.load('my_model1.pkl')
+
+model=joblib.load('my_model21.pkl')
 
 # Title and Description
 st.title("Rain Tomorrow Prediction")
@@ -26,6 +28,11 @@ def preprocess_input(df):
     # Encoding categorical features
     for col in [ 'Location', 'WindGustDir', 'WindDir9am', 'WindDir3pm', 'RainToday']:
         df[col] = le.fit_transform(df[col].astype(str))  # Convert to string in case of any NaNs or unusual types
+
+    sc = StandardScaler()
+    X_train = sc.fit_transform(df)    
+
+    return df
     
 
 # Function to collect user input
