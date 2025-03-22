@@ -1,0 +1,7 @@
+# Post-Quantum Cryptography Parameters
+kyber:
+  security_level: 5  # 1-5 (5=highest security)
+dilithium:
+  mode: 3            # Mode 3 for optimal balance
+falcon:
+  tree_depth: 10

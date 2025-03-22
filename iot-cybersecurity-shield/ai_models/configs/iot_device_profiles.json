@@ -1,0 +1,12 @@
+{
+  "sensor_v1": {
+    "cpu": "ARM Cortex-M4",
+    "ram": "256KB",
+    "protocols": ["MQTT", "CoAP"]
+  },
+  "camera_v2": {
+    "cpu": "RISC-V",
+    "ram": "2MB",
+    "protocols": ["RTSP", "HTTP/2"]
+  }
+}
